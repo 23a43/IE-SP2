@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glass Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 30px;
+      width: 320px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.3);
+      color: #000;
+    }
+
+    .container input::placeholder {
+      color: #333;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .options a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .container button {
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(76, 175, 80, 0.8);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .container button:hover {
+      background-color: rgba(76, 175, 80, 1);
+    }
+  </style>
 </head>
 <body>
+  <form>
+    <div class="container">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="Username"/>
+      <input type="password" placeholder="Password" id="password" />
+      <div class="options">
+        <label><input type="checkbox" id="remember"/> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" id="submit">Login</button>
+    </div>
+  </form>
+  <script>
+
+    let Username = document.getElementById("Username");
+    let password = document.getElementById("password");
+    let remember = document.getElementById("remember");
+    let submitBtn = document.getElementById("submit");
+
     
+
+    submitBtn.addEventListener("click", function(event) {
+      event.preventDefault();
+      let userValue = Username.value.trim();
+      let passValue = password.value;
+
+      if(userValue === "" || passValue === ""){
+      alert("Please fill all fields");
+      return;
+    }
+    if(userValue === "ekbal" && passValue === "1234"){
+      alert("Login Successful!");
+    }
+    else{
+      alert("Invalid Username Or Password");
+    }
+      console.log(userValue);
+    });
+
+
+
+  </script>
 </body>
 </html>
