@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: aqua;
 } * {
       margin: 0;
@@ -80,4 +80,15 @@ body{
 
     .container button:hover {
       background-color: rgba(76, 175, 80, 1);
-    }
+    } */
+     body {
+      background-color: red;
+     }
+     nav {
+      background-color: lightblue;
+     }
+     nav ul {
+      display: flex;
+      gap: 75rem;
+      list-style: none;
+     }
