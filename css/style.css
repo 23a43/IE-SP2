@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glass Login</title>
-  <style>
-    * {
+/* body{
+    background-color: aqua;
+} * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -85,51 +80,15 @@
 
     .container button:hover {
       background-color: rgba(76, 175, 80, 1);
-    }
-  </style>
-</head>
-<body>
-  <form>
-    <div class="container">
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" id="Username"/>
-      <input type="password" placeholder="Password" id="password" />
-      <div class="options">
-        <label><input type="checkbox" id="remember"/> Remember me</label>
-        <a href="#">Forgot Password?</a>
-      </div>
-      <button type="submit" id="submit">Login</button>
-    </div>
-  </form>
-  <script>
-
-    let Username = document.getElementById("Username");
-    let password = document.getElementById("password");
-    let remember = document.getElementById("remember");
-    let submitBtn = document.getElementById("submit");
-
-    
-
-    submitBtn.addEventListener("click", function(event) {
-      event.preventDefault();
-      let userValue = Username.value.trim();
-      let passValue = password.value;
-
-      if(userValue === "" || passValue === ""){
-      alert("Please fill all fields");
-      return;
-    }
-    if(userValue === "ekbal" && passValue === "1234"){
-      alert("Login Successful!");
-    }
-    else{
-      alert("Invalid Username Or Password");
-    }
-      console.log(userValue);
-    });
-
-
-
-  </script>
-</body>
-</html>
+    } */
+     body {
+      background-color: red;
+     }
+     nav {
+      background-color: lightblue;
+     }
+     nav ul {
+      display: flex;
+      gap: 75rem;
+      list-style: none;
+     }

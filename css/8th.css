@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg-red {
+    /*margin: 50px;*/
+    padding: 50px;
+    background-color: red;
+    position: relative;
+    top: 0;
+    
+}
+.bg-blue{
+    padding: 50px;
+    background-color: blue;
+    display: none;
+
+}
+body{
+    background: linear-gradient(135deg,gray, white);
+    height: 200vh;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    /*justify-content: space-around;*/
+    justify-content: space-between;
+   /* justify-content: center;*/
+   /* justify-content: flex-start;*/
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+.flex-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    height: 300px;
+    width: 30%;
+    background-color: white;
+}
